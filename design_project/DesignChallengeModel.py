@@ -59,7 +59,7 @@ device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cp
 # Load the tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 current_model = SentimentClassifier("bert-base-uncased", num_labels=2)
-current_model.load_state_dict(torch.load("sentiment_model_epoch_3.pt"))
+current_model.load_state_dict(torch.load("sentiment_model_epoch_6.pt"))
 current_model.to(device)
 
 def prepare_dataset_from_csv(csv_path, tokenizer, max_length=256):
